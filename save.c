@@ -17,17 +17,18 @@ int main(int argc, char *argv[])
         exit();
     }
 
-    write(fd, argv[2], strlen(argv[2]));// Write the content to the file
-    write(fd, "\n", 1);
+    //write(fd, argv[2], strlen(argv[2]));// Write the content to the file
+    //write(fd, "\n", 1);
 
     //if we are required to write multiple strings to the file, we can loop through the arguments and write each one to the file, but will comment this out 
-    //for now, as the original question only says a string 
-    //int i;
-    // for(i = 3; i < argc; i++){
-    //     write(fd, " ", 1);// Write a space between each string
-    //     write(fd, argv[i], strlen(argv[i]));// Write the string to the file
-    // }
-
+     
+    int i;
+     for(i = 2; i < argc; i++){
+         write(fd, " ", 1);// Write a space between each string
+         write(fd, argv[i], strlen(argv[i]));// Write the string to the file
+     }
+     
+    write(fd, "\n", 1);
     close(fd);// Close the file descriptor
 
 

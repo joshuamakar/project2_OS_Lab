@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     // Print the sorted strings to the terminal
   
 
-    printf(1, "Sorted strings: \n");
+    printf(1, "Sorted numbers: \n");
     for(int i = 0; i < argc - 1; i++){
         printf(1, "%d\n", sorted[i]);
     }
